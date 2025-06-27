@@ -9,6 +9,9 @@ export interface User {
   rating?: number;
   createdAt: string;
   walletAddress?: string;
+  referralCode?: string;
+  referredBy?: string;
+  airdropBalance?: number;
 }
 
 export interface Grant {
@@ -19,7 +22,7 @@ export interface Grant {
   title: string;
   description: string;
   amount: number;
-  currency: 'USD' | 'SUI';
+  currency: 'USD' | 'SUI' | 'NGN' | 'EUR' | 'GBP';
   category: 'healthcare' | 'education' | 'emergency' | 'research' | 'community';
   eligibility: string[];
   requirements: string[];
@@ -29,6 +32,7 @@ export interface Grant {
   status: 'active' | 'closed' | 'completed';
   createdAt: string;
   successfulGrants: number;
+  transactionFee: number;
 }
 
 export interface Application {
@@ -50,4 +54,35 @@ export interface DonorStats {
   pendingApplications: number;
   successfulGrants: number;
   rating: number;
+  totalFeesPaid: number;
+}
+
+export interface CurrencyRate {
+  from: string;
+  to: string;
+  rate: number;
+  lastUpdated: string;
+}
+
+export interface Transaction {
+  id: string;
+  userId: string;
+  type: 'conversion' | 'grant' | 'airdrop' | 'fee';
+  amount: number;
+  fromCurrency: string;
+  toCurrency?: string;
+  fee: number;
+  status: 'pending' | 'completed' | 'failed';
+  createdAt: string;
+  hash?: string;
+}
+
+export interface AirdropReward {
+  id: string;
+  organizationId: string;
+  referredUserId: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'claimed';
+  createdAt: string;
 }
