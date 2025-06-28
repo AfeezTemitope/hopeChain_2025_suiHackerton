@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Search, Filter, Star, Clock, Users, DollarSign, MapPin, Calendar, Heart, FileText, Coins, TrendingUp } from 'lucide-react';
+import { Search, Filter, Star, Clock, Users, DollarSign, Calendar, Heart, FileText, Coins } from 'lucide-react';
 import { demoGrants } from '../../data/demoData';
 import { Grant } from '../../types';
 import ApplicationModal from './ApplicationModal';
-import AllDonorsMarketplace from './AllDonorsMarketplace';
+import AllDonorsMarketplace from './AllDonorsMarketPlace.tsx';
 
 const GrantMarketplace: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
