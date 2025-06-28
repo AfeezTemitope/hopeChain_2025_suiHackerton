@@ -7,16 +7,16 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
   return (
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 pt-20">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200 dark:bg-primary-800 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-accent-200 dark:bg-accent-800 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float" style={{ animationDelay: '-2s' }}></div>
+          <div className="absolute top-32 left-10 w-20 h-20 bg-primary-200 dark:bg-primary-800 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float"></div>
+          <div className="absolute top-52 right-20 w-32 h-32 bg-accent-200 dark:bg-accent-800 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float" style={{ animationDelay: '-2s' }}></div>
           <div className="absolute bottom-40 left-20 w-16 h-16 bg-success-200 dark:bg-success-800 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float" style={{ animationDelay: '-4s' }}></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 bg-primary-300 dark:bg-primary-700 rounded-full mix-blend-multiply dark:mix-blend-screen opacity-70 animate-float" style={{ animationDelay: '-1s' }}></div>
 
           {/* Web3 Floating Icons */}
-          <div className="absolute top-32 right-32 animate-float" style={{ animationDelay: '-3s' }}>
+          <div className="absolute top-44 right-32 animate-float" style={{ animationDelay: '-3s' }}>
             <Coins className="h-8 w-8 text-accent-400 dark:text-accent-600 opacity-60" />
           </div>
           <div className="absolute bottom-32 left-32 animate-float" style={{ animationDelay: '-5s' }}>
@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onGetStarted }) => {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center animate-slide-up">
             {/* Logo and Brand */}
             <div className="flex justify-center items-center space-x-3 mb-8">
